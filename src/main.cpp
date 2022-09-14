@@ -59,9 +59,13 @@ void loop()
     {
       Serial2.print(connection_status);
     }
-    else if (msg == "something")
+    else if (msg == "get_balance")
     {
       // Do something
+      delay(1000 / 2);
+      while (!((int)msg[0] >= 49 && msg[0] <= 58))
+        msg = Serial2.readString();
     }
+    
   }
 }
