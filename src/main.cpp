@@ -37,6 +37,19 @@ void connect_wifi()
   connection_status = "connected";
 }
 
+bool string_to_int(String n)
+{
+  bool is_int = true;
+  for (int i = 0; i < n.length(); i++)
+  {
+    if (n[i] < '0' || n[i] > '9')
+    {
+      is_int = false;
+    }
+  }
+  return is_int;
+}
+
 void setup()
 {
   // put your setup code here, to run once:
