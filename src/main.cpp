@@ -37,6 +37,16 @@ void connect_wifi()
   connection_status = "connected";
 }
 
+int string_to_int(String str)
+{
+  int num = 0;
+  for (int i = 0; i < str.length(); i++)
+  {
+    num = num * 10 + (str.charAt(i) - '0');
+  }
+  return num;
+}
+
 void setup()
 {
   // put your setup code here, to run once:
