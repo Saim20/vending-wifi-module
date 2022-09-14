@@ -37,17 +37,14 @@ void connect_wifi()
   connection_status = "connected";
 }
 
-bool string_to_int(String n)
+int string_to_int(String str)
 {
-  bool is_int = true;
-  for (int i = 0; i < n.length(); i++)
+  int num = 0;
+  for (int i = 0; i < str.length(); i++)
   {
-    if (n[i] < '0' || n[i] > '9')
-    {
-      is_int = false;
-    }
+    num = num * 10 + (str.charAt(i) - '0');
   }
-  return is_int;
+  return num;
 }
 
 void setup()
